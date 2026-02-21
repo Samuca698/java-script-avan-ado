@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    
+<p id="soma"></p>
+<p id="media"></p>
+<p id="maior"></p>
+<p id="impares"></p>
+<p id="maiorDeIdade"></p>
+<p id="comparaIdades"></p>
+<p id="resultado2"></p>
+<p id="media2"></p>
+
+    <script>
+
+document.addEventListener("DOMContentLoaded", () =>{
+
+const idades = [];
+
+const idade1 = Number(prompt("insira a primeira idade"));
+const idade2 = Number(prompt("insira a segunda idade"));
+const idade3 = Number(prompt("insira a terceira idade"));
+const idade4 = Number(prompt("insira a quarta idade"));
+const idade5 = Number(prompt("insira a quinta idade"));
+
+if (!isNaN(idade1) && idade1 > 0) idades.push(idade1);
+if (!isNaN(idade2) && idade2 > 0) idades.push(idade2);
+if (!isNaN(idade3) && idade3 > 0) idades.push(idade3);
+if (!isNaN(idade4) && idade4 > 0) idades.push(idade4);
+if (!isNaN(idade5) && idade5 > 0) idades.push(idade5);
+
+
+
+
+const somarIdades = vetor =>
+
+    vetor.reduce((soma, idades) => soma + idades, 0);
+
+
+
+const mediaIdades = vetor => {
+
+    const soma = somarIdades(vetor);
+    const media = soma / vetor.length;
+
+    return media;
+}
+
+const maiorIdade = vetor => {
+
+    return vetor.reduce((maior, idades) => idades > maior ? idades : maior, vetor[0]);
+
+}
+
+const idadesImpares = vetor => {
+
+    return vetor.filter(idades => idades % 2 !== 0);
+}
+
+const acima18 = vetor => {
+
+    const maior18 = vetor.every(idade => idade >= 18);
+
+    document.getElementById("maiorDeIdade").textContent = maior18
+      ? "Todas as pessoas são maiores de 18 anos"
+      : "Existe pelo menos uma pessoa menor de 18 anos";
+    
+}
+
+acima18(idades);
+
+const compararNum = vetor => {
+
+    const comparar = Number(prompt("Insira o valor a ser comparado com as idades"));
+
+    if (isNaN(comparar) || comparar <= 0){
+    alert("valopr invalido");
+    return;
+    }
+
+const resultado = vetor.every( idade => idade >= comparar);
+
+const resposta = document.getElementById("comparaIdades");
+
+if(resultado){
+
+    resposta.textContent = "Sim todas as idades sao maiores ou iguas a " + comparar;
+
+}else{
+    resposta.textContent = "Nao nem todas idades sao iguais ou maiores a " + comparar;
+
+}
+return;
+}
+
+compararNum(idades);
+
+const comparativo = vetor => {
+
+const comparativo = Number(prompt("Insira o valor de uma idade para a comparar"));
+
+    if (isNaN(comparativo) || comparativo <= 0) return;
+
+
+const resultado2 = vetor.filter(idade => idade >= comparativo);
+
+    document.getElementById("resultado2").textContent =
+        "Idades maiores ou iguais a " + comparativo + ": " + resultado2.join(", ");
+
+}
+
+comparativo(idades);
+
+
+const valorInformado = Number(prompt("Insira o valor desejado"));
+
+
+    const idadesValidas = idades.filter(idade => idade >= valorInformado);
+
+    const soma2 = idadesValidas.reduce((total, soma) => total + soma, 0)
+
+    const media2 = soma2 / idadesValidas.length || 0;
+
+    document.getElementById("media2").textContent = "media das idades maior ou igual a " + valorInformado + " e " + media2;
+
+
+
+document.getElementById("impares").textContent = "os numeros impares sao: " + idadesImpares(idades).join(",  ");
+document.getElementById("maior").textContent = "A maior idade e: " + maiorIdade(idades);
+document.getElementById("soma").textContent = "A soma e: " + somarIdades(idades);
+document.getElementById("media").textContent = "A media e: " + mediaIdades(idades);
+
+
+})
+      
+    </script>
+
+</body>
+
+</html>
