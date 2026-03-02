@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<p id="MaiorIdade"></p>
+<p id="Masculino"></p>
+<p id="maiorSalario"></p>
+<p id="MaiorSalarioF"></p>
+<p id="mediaHomem"></p>
+<p id="mediaMulher"></p>
+    
+<script>
+
+document.addEventListener("DOMContentLoaded", () =>{
+
+const tabela = [
+
+    { NomeCompleto: "Ana", Idade: "18", Sexo: "F", Salario: "R$ 1.000,00" },
+    { NomeCompleto: "Joao", Idade: "20", Sexo: "M", Salario: "R$ 3.000,00" },
+    { NomeCompleto: "Cesar", Idade: "33", Sexo: "M", Salario: "R$ 1.900,00" },
+    { NomeCompleto: "Maria", Idade: "12", Sexo: "F", Salario: "R$ 7.000,00" },
+    { NomeCompleto: "Ze", Idade: "17", Sexo: "M", Salario: "R$ 2.400,00" },
+
+]
+
+tabela.forEach(user => {
+    console.log(`${user.NomeCompleto} tem ${user.Idade} do sexo ${user.Sexo} e recebe ${user.Salario}`)
+})
+
+
+
+const maiorDeIdade = tabela.filter(idade => idade.Idade >= 18);
+
+const anos = maiorDeIdade.map(idade => idade.Idade);
+
+console.log(maiorDeIdade);
+
+document.getElementById("MaiorIdade").textContent = "as pessoas que contem idades acima ou igual a 18 são: " + anos;
+
+const nomeMasculino = tabela.filter(pessoa => pessoa.Sexo === "M");
+
+const homens = nomeMasculino.map(pessoa => pessoa.NomeCompleto);
+
+document.getElementById("Masculino").textContent = "Os nomes masculinos da tabela são: " + homens.join(", ");
+
+console.log(nomeMasculino);
+
+
+const maiorSalario = tabela.reduce((x, y) => {
+
+const salario = Number(y.Salario
+
+.replace("R$","")
+.replace(".","")
+.replace(",",".")
+
+)
+
+if(salario > x){
+return salario
+}
+
+else{
+    return x;
+}
+
+
+},0)
+
+console.log(maiorSalario);
+
+document.getElementById("maiorSalario").textContent = "O maior salario e: " + maiorSalario;
+
+const salarioFemenino = tabela.filter(pessoa =>{
+
+const salario = Number(pessoa.Salario
+
+.replace("R$","")
+.replace(".","")
+.replace(",",".")
+
+)
+
+return pessoa.Sexo === "F" && salario > 5000;
+
+});
+
+console.log(salarioFemenino);
+
+document.getElementById("MaiorSalarioF").textContent = "Sim " + salarioFemenino[0].NomeCompleto + " ganha mais que R$ 5.000,00 ela ganha exatamente " + salarioFemenino[0].Salario;
+
+const salarioHomem = tabela.filter(x =>  x.Sexo === "M") 
+
+const todosHomens = salarioHomem.map(x => Number(x.Salario
+
+.replace("R$","")
+.replace(".","")
+.replace(",",".")
+
+))
+
+const somaSalarioHomem = todosHomens.reduce((x, y) => x + y, 0)
+
+const mediaHomem = somaSalarioHomem / 3;
+
+document.getElementById("mediaHomem").textContent = "A media dos salarios de todos os Homens sao: " + "R$ " + mediaHomem;
+
+console.log(mediaHomem);
+
+
+
+const salarioMulher = tabela.filter(x =>  x.Sexo === "F") 
+
+const todosMulher = salarioMulher.map(x => Number(x.Salario
+
+.replace("R$","")
+.replace(".","")
+.replace(",",".")
+
+))
+
+const somaSalarioMulher = todosMulher.reduce((x, y) => x + y, 0)
+
+const mediaMulher = somaSalarioMulher / 2;
+
+document.getElementById("mediaMulher").textContent = "A media dos salarios de todas as mulheres sao: " + "R$ "+ mediaMulher;
+
+console.log(mediaMulher);
+
+
+})
+  
+</script>
+
+</body>
+</html>
