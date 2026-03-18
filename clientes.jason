@@ -1,0 +1,27 @@
+[
+  {
+    "nome": "Carlos Silva",
+    "depoimento": "Produto excelente!",
+    "rating": 5
+  },
+  {
+    "nome": "Ana Souza",
+    "depoimento": "Muito bom!",
+    "rating": 4
+  },
+  {
+    "nome": "João Pereira",
+    "depoimento": "Não gostei muito",
+    "rating": 2
+  },
+  {
+    "nome": "Mariana Costa",
+    "depoimento": "Recomendo demais",
+    "rating": 5
+  },
+  {
+    "nome": "Lucas Oliveira",
+    "depoimento": "Mais ou menos",
+    "rating": 3
+  }
+]
