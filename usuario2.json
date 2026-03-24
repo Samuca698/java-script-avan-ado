@@ -1,0 +1,22 @@
+[
+  {
+    "nome": "wilton.filho",
+    "senha": "$2a$10$iTydg4XOZrBkD81m7Bt3D.z9sFhy1EfCqfxnw4EPI6h7vTuqMvqPK"
+  },
+  {
+    "nome": "maria.jose",
+    "senha": "$2a$10$aDddpHGMj2jMcTeTnHoJguKMZepMjAcqiLgYiBs1zE9Ntn.ZpAxh."
+  },
+  {
+    "nome": "teste1",
+    "senha": "$2a$10$Bshkg83ZHoVdyiAB.mK3Ne4chOFDtNi92PFaxqjVCbWb6VY9A1s8W"
+  },
+  {
+    "nome": "teste2",
+    "senha": "$2a$10$iHvnBT2No6IRUISJlcv2nuWzKFvFldZm5mvmbLACjaRjuCW8RtM2O"
+  },
+  {
+    "nome": "ana.carol",
+    "senha": "$2a$10$aBjksUQGhY3Sr/Xac15kd.1K.VT4BMeDz2rCNmD72jZxY5w1SurKi"
+  }
+]
