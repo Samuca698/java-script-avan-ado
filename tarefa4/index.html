@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Minicursos</title>
+</head>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    /* Espaçamentos */
+    --internal-space: 10px;
+
+    /* Espaçamentos */
+    --space-0: 0px;
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 48px;
+    --space-8: 64px;
+    --space-9: 80px;
+    --space-10: 96px;
+
+    /* Layout */
+    --max-width-container: 1250px;
+    --border-main-title: 25px;
+    --border-box: 10px;
+
+    /* Cores */
+    --bg-emphasis: rgb(241, 241, 241);
+    --color-text: #152660;
+
+    /* --color-text: blue; */
+    --color-buttons: #AF872D;
+
+    /* Tamanho das fontes*/
+    --font-subtitle2: 28px;
+    --font-paragraph: 16px;
+}
+
+
+.h2nav {
+    color: white;
+    text-align: center;
+    font-size: 38px;
+    transition: transform 0.3s ease;
+}
+
+.h2nav:hover {
+      transform: scale(0.9);
+      color: rgb(238, 238, 238);
+}
+
+
+
+
+.nav1 {
+    background-color: #b4b4b4;
+    padding-bottom: 8%;
+
+}
+
+
+.h1cad1 {
+    margin: 2px;
+    width: 250px;
+    height: 100px;
+    margin-bottom: -9.70%;
+    margin-left: 18%;
+    text-align: center;
+    margin-top: 5%;
+    transition: transform 0.3s ease;
+}
+
+.h1cad1:hover {
+      transform: scale(0.9);
+}
+
+.h2cad1 {
+    margin: 2px;
+    width: 250px;
+    height: 100px;
+    margin-bottom: -11%;
+    margin-left: 18%;
+    text-align: center;
+    margin-top: 7%;
+    transition: transform 0.3s ease;
+}
+
+.h2cad1:hover {
+      transform: scale(0.9);
+}
+
+.p1 {
+    margin: 2px;
+    width: 250px;
+    height: 100px;
+    margin-top: 1%;
+    margin-left: 18%;
+    text-align: center;
+
+}
+
+.img1 {
+    width: 250px;
+    height: 230px;
+    margin: 2px;
+    margin-top: 5%;
+    margin-left: 18%;
+    transition: transform 0.3s ease;
+}
+
+.img1:hover {
+      transform: scale(0.9);
+}
+
+.h1cad2 {
+    margin: 2px;
+    width: 250px;
+    height: 100px;
+    margin-bottom: -9.70%;
+    margin-left: 41%;
+    text-align: center;
+    margin-top: -32%;
+    transition: transform 0.3s ease;
+}
+
+.h1cad2:hover {
+      transform: scale(0.9);
+}
+
+.h2cad2 {
+    margin: 2px;
+    width: 250px;
+    height: 100px;
+    margin-bottom: -11%;
+    margin-left: 41%;
+    text-align: center;
+    margin-top: 7%;
+    transition: transform 0.3s ease;
+}
+
+.h2cad2:hover {
+      transform: scale(0.9);
+}
+
+.p2 {
+    margin: 2px;
+    width: 250px;
+    height: 100px;
+    margin-top: 1%;
+    margin-left: 41%;
+    text-align: center;
+
+}
+
+.img2 {
+    width: 250px;
+    height: 230px;
+    margin: 2px;
+    margin-top: 5%;
+    margin-left: 41%;
+    transition: transform 0.3s ease;
+}
+
+.img2:hover {
+      transform: scale(0.9);
+}
+
+.h1cad3 {
+    margin: 2px;
+    width: 250px;
+    height: 100px;
+    margin-bottom: -9.70%;
+    margin-left: 63%;
+    text-align: center;
+    margin-top: -32.3%;
+    transition: transform 0.3s ease;
+}
+
+.h1cad3:hover {
+      transform: scale(0.9);
+}
+
+.h2cad3 {
+    margin: 2px;
+    width: 250px;
+    height: 100px;
+    margin-bottom: -11%;
+    margin-left: 63%;
+    text-align: center;
+    margin-top: 7%;
+    transition: transform 0.3s ease;
+
+}
+
+.h2cad3:hover {
+      transform: scale(0.9);
+}
+
+.p3 {
+    margin: 2px;
+    width: 250px;
+    height: 100px;
+    margin-top: 1%;
+    margin-left: 63%;
+    text-align: center;
+
+
+}
+
+details {
+    margin-bottom: 20%;
+}
+
+.img3 {
+    width: 230px;
+    height: 210px;
+    margin: 2px;
+    margin-top: 6%;
+    margin-left: 63.5%;
+    margin-bottom: 1%;
+    transition: transform 0.3s ease;
+}
+
+summary {
+    margin: 2px;
+    border: 2px solid rgb(196, 0, 0);
+    width: 65%;
+    height: 50px;
+    margin-left: 18.5%;
+    border-radius: 10px;
+    background-color: rgb(196, 0, 0);
+    list-style: none;
+}
+
+summary:hover {
+    background-color: rgb(167, 0, 0);
+
+}
+
+.pd {
+    margin-top: 10%;
+    padding-bottom: 1%;
+
+}
+
+.pd1 {
+    margin-top: 2%;
+    padding-bottom: 30%;
+
+}
+
+
+body {
+    background-color: #d1d0d0;
+}
+
+.psum {
+    color: rgb(247, 240, 240);
+    margin-top: 8.5%;
+}
+
+
+
+h2 {
+    font-size: 15px;
+}
+
+ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+</style>
+
+<body>
+    <header>
+        <nav class="nav1">
+            <br><br><br><br><br><br><br><br>
+
+            <h2 class="h2nav">Minicurso para front-enders</h2>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+            <div class="cards1">
+
+                <div class="cards1">
+                    <h1 class="h1cad1">HTML</h1>
+                    <h2 class="h2cad1">🌐 Minicurso HTML</h2>
+                    <img class="img1" src="img/logoHTML.webp" alt="">
+
+                    <details class="p1">
+                        <p class="pd">O <b>HTML</b> é o Alicerce da Web! <b>Aprenda a base fundamental</b> de todos os
+                            sites</p>. <p class="pd1"> HTML é o esqueleto que sustenta o conteúdo. <b>Crie</b> o
+                            alicerce sólido do <b>seu projeto web!</b></p>
+                        <summary>
+                            <p class="psum">Mais Informações</p>
+                        </summary>
+                    </details>
+
+                </div>
+
+                <div class="cards2">
+                    <h1 class="h1cad2">CSS</h1>
+                    <h2 class="h2cad2">🎨 Minicurso CSS</h2>
+                    <img class="img2" src="img/logoCSS.webp" alt="">
+                    <details class="p2">
+                        <p class="pd">
+                            O <b>CSS</b> cria páginas com estilo <b>e um design</b> impressionante!
+                            <b>Transforme estruturas simples em layouts</b> incríveis.
+                        </p>
+
+                        <p class="pd">
+                            CSS é a arte que embeleza a web.
+                            <b>Cor, layout, responsividade e animações</b>!
+                        </p>
+
+                        <p class="pd">Conteúdo do curso:</p>
+
+                        <ul class="pd1">
+                            <li>Sintaxe</li>
+                            <li>Seletores e Especificidade</li>
+                            <li>Modelo de Caixa (Box Model)</li>
+                            <li>Layout Moderno (Flexbox e Grid)</li>
+                            <li>Design Responsivo</li>
+                        </ul>
+
+                        <summary>
+                            <p class="psum">Mais Informações</p>
+                        </summary>
+                    </details>
+
+                </div>
+
+                <div class="" cards3>
+                    <h1 class="h1cad3">JavaScript</h1>
+                    <h2 class="h2cad3">⚡ Minicurso JavaScript</h2>
+                    <img class="img3" src="img/logoJS.webp" alt="">
+                    <details class="p3">
+                        <p class="pd">
+                            A Mágica da Interatividade!. Crie experiências dinâmicas e interativas.
+                        </p>
+
+                        <p class="pd">
+                            <b>JavaScript dá vida e lógica às páginas web.</b>
+                            Eventos, animações complexas, etc.
+                        </p>
+
+                        <p class="pd">Conteúdo do curso:</p>
+
+                        <ul class="pd1">
+                            <li>Fundamentos e Sintaxe</li>
+                            <li>Funções e Escopo</li>
+                            <li>Manipulação da DOM</li>
+                            <li>Eventos e Interatividade</li>
+                        </ul>
+
+                        <summary>
+                            <p class="psum">Mais Informações</p>
+                        </summary>
+                    </details>
+
+                </div>
+
+
+
+
+
+
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+</body>
+
+</html>
